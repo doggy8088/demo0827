@@ -10,7 +10,10 @@
       <div id="ctl00_cphBody_PostList1_posts" class="posts">
 
         <!-- Article START-->
-        <app-article [item]="item" *ngFor="let item of data; let i = index"></app-article>
+        <app-article
+          [item]="item" *ngFor="let item of data; let i = index"
+          (delete)="deleteArticle($event)">
+        </app-article>
         <!-- Article END-->
 
       </div>
@@ -39,8 +42,7 @@
         <!-- Search END -->
 
 <div [ngSwitch]="keyword">
-  <div *ngSwitchCase="'1'">
-
+  <div *ngSwitchCase="num">
 
         <!-- Calendar START -->
         <div class="widget calendar">
