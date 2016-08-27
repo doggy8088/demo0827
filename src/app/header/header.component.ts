@@ -7,9 +7,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
 
+  title = "Angular 2 太強大惹!";
+
   constructor() { }
 
   ngOnInit() {
+  }
+
+  changeTitle() {
+    this.title = "The Will Will Web";
   }
 
 }
