@@ -14,6 +14,10 @@ export class AppComponent {
     this.keyword = keyword;
   }
 
+  deleteArticle(i) {
+    this.data.splice(i, 1);
+  }
+
   data: any[] = [
     {
       "href": "http://blog.miniasp.com/post/2016/04/30/Visual-Studio-Code-from-Command-Prompt-notes.aspx",
