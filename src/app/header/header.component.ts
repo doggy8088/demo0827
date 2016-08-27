@@ -30,4 +30,8 @@ export class HeaderComponent implements OnInit {
     }
   }
 
+  getClass() {
+    return {'red': (this.num % 2)==0};
+  }
+
 }

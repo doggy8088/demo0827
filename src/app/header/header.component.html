@@ -29,7 +29,9 @@
 
       <hgroup class="pull-left">
         <h1><a href="http://blog.miniasp.com/">{{title}}</a></h1>
-        <h3 (click)="plusOne($event)">{{subtitle}} +{{num}}</h3>
+        <h3 (click)="plusOne($event)"
+          [ngClass]="getClass()"
+          [ngStyle]="{'font-size': (num+10)+'px'}">{{subtitle}} +{{num}}</h3>
       </hgroup>
 
       <div id="social-icons" class="pull-right social-icon">
