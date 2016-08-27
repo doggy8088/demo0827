@@ -90,6 +90,10 @@
         </div>
         <!-- Search END -->
 
+<div [ngSwitch]="keyword">
+  <div *ngSwitchCase="'1'">
+
+
         <!-- Calendar START -->
         <div class="widget calendar">
           <h4 class="widget-header">
@@ -183,6 +187,9 @@
         </div>
         <!-- Calendar END -->
 
+  </div>
+  <div *ngSwitchCase="'2'">
+
         <!-- CategoryList START -->
         <div class="widget categorylist">
           <h4 class="widget-header">
@@ -209,6 +216,9 @@
         </div>
         <!-- CategoryList END -->
 
+  </div>
+  <div *ngSwitchCase="'3'">
+
         <!-- MVP START -->
         <div class="widget textbox">
           <h4 class="widget-header">
@@ -225,6 +235,9 @@
         </div>
         <!-- MVP END -->
 
+  </div>
+  <div *ngSwitchDefault>N/A</div>
+</div>
       </div>
     </aside>
     <!-- Aside END -->
