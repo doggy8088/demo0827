@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { ArticleComponent } from './article/article.component';
 import { HighlightPipe } from './highlight.pipe';
+import { DataService } from './data.service';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,9 @@ import { HighlightPipe } from './highlight.pipe';
     CommonModule,
     FormsModule
   ],
-  providers: [],
+  providers: [
+    DataService
+  ],
   entryComponents: [AppComponent],
   bootstrap: [AppComponent]
 })
