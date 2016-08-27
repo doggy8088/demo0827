@@ -5,6 +5,13 @@ export class DataService {
 
   constructor() { }
 
+  keyword: string = '';
+
+  deleteArticle(item) {
+    let i = this.data.indexOf(item);
+    this.data.splice(i, 1);
+  }
+
   data: any[] = [
     {
       "href": "http://blog.miniasp.com/post/2016/04/30/Visual-Studio-Code-from-Command-Prompt-notes.aspx",

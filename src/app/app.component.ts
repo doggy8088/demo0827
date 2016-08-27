@@ -9,20 +9,11 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'app works!';
 
-  keyword = '';
-
   doSearch(keyword: string) {
-    this.keyword = keyword;
-  }
-
-  deleteArticle(item) {
-    let i = this.data.indexOf(item);
-    this.data.splice(i, 1);
+    this.datasvc.keyword = keyword;
   }
 
   constructor(private datasvc: DataService) {
-    this.data = datasvc.data;
   }
 
-  data: any[];
 }

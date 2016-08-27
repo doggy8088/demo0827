@@ -1,3 +1,4 @@
+import { DataService } from './../data.service';
 import { Component, OnInit, OnChanges, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
@@ -5,28 +6,14 @@ import { Component, OnInit, OnChanges, Input, Output, EventEmitter } from '@angu
   templateUrl: 'article.component.html',
   styleUrls: ['article.component.css']
 })
-export class ArticleComponent implements OnInit, OnChanges {
+export class ArticleComponent implements OnInit {
 
   @Input()
   item: any;
 
-  @Input()
-  keyword: string;
-
-  @Output()
-  delete = new EventEmitter<any>();
-
-  // deleteArticle(item) {
-  //   this.delete.emit(item);
-  // }
-
-  constructor() { }
+  constructor(private datasvc: DataService) { }
 
   ngOnInit() {
-  }
-
-  ngOnChanges() {
-
   }
 
 }
