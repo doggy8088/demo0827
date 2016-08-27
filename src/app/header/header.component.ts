@@ -8,7 +8,9 @@ import { Component, OnInit } from '@angular/core';
 export class HeaderComponent implements OnInit {
 
   title = 'The Will Will Web';
-  subtitle = '記載著 <strong>Will</strong> 在網路世界的學習心得與技術分享';
+  subtitle = '記載著 Will 在網路世界的學習心得與技術分享';
+
+  num = 1;
 
   constructor() { }
 
@@ -17,6 +19,15 @@ export class HeaderComponent implements OnInit {
 
   changeTitle() {
     this.title = "The Will Will Web";
+  }
+
+  plusOne($event: MouseEvent) {
+    console.log($event);
+    if($event.shiftKey) {
+      this.num = this.num - 1;
+    } else {
+      this.num = this.num + 1;
+    }
   }
 
 }
