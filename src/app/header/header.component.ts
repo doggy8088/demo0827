@@ -21,7 +21,12 @@ export class HeaderComponent implements OnInit {
     this.title = "The Will Will Web";
   }
 
+  showIcons = true;
+
   plusOne($event: MouseEvent) {
+
+    this.showIcons = !this.showIcons;
+
     console.log($event);
     if($event.shiftKey) {
       this.num = this.num - 1;
