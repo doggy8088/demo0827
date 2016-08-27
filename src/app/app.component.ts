@@ -10,9 +10,7 @@ export class AppComponent {
 
   keyword = '';
 
-  doSearch($event: KeyboardEvent, keyword: string) {
-    if($event.keyCode == 13/* Enter */) {
-      this.keyword = keyword;
-    }
+  doSearch(keyword: string) {
+    this.keyword = keyword;
   }
 }

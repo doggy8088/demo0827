@@ -80,7 +80,8 @@
                 <input type="text"
                        #keywordInput
                        [value]="keyword"
-                       (keyup)="doSearch($event, keywordInput.value)"
+                       (keyup.enter)="doSearch(keywordInput.value)"
+                       (keyup.escape)="keyword=''"
                        placeholder="請輸入搜尋關鍵字" accesskey="s">
                 <input type="button" value="搜尋" id="searchbutton">
               </div>
