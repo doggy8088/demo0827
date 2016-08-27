@@ -10,6 +10,9 @@ export class ArticleComponent implements OnInit, OnChanges {
   @Input()
   item: any;
 
+  @Input()
+  keyword: string;
+
   @Output()
   delete = new EventEmitter<any>();
 

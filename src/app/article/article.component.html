@@ -11,7 +11,7 @@
         (click)="delete.emit(item)"></span>
     </div>
   </header>
-  <section class="post-body text" [innerHTML]="item.summary">
+  <section class="post-body text" [innerHTML]="item.summary|highlight:keyword">
   </section>
   <pre>{{item|json}}</pre>
 </article>

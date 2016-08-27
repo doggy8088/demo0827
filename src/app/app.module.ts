@@ -5,10 +5,11 @@ import { FormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { ArticleComponent } from './article/article.component';
+import { HighlightPipe } from './highlight.pipe';
 
 @NgModule({
   declarations: [
-    AppComponent, HeaderComponent, ArticleComponent
+    AppComponent, HeaderComponent, ArticleComponent, HighlightPipe
   ],
   imports: [
     BrowserModule,
